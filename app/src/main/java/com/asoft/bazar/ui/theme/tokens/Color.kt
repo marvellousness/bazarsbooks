@@ -3,6 +3,7 @@ package com.asoft.bazar.ui.theme.tokens
 import androidx.compose.material3.darkColorScheme
 import androidx.compose.material3.lightColorScheme
 import androidx.compose.runtime.staticCompositionLocalOf
+import androidx.compose.ui.graphics.Color
 import com.asoft.bazar.ui.theme.tokens.PaletteTokens.GrayScale200
 import com.asoft.bazar.ui.theme.tokens.PaletteTokens.Primary200
 import com.asoft.bazar.ui.theme.tokens.PaletteTokens.Primary500
@@ -10,7 +11,7 @@ import com.asoft.bazar.ui.theme.tokens.PaletteTokens.Yellow1
 
 
 internal val DarkColorScheme = darkColorScheme(
-    primary = Yellow1,
+    primary = Primary200,
     secondary = GrayScale200,
     tertiary = Primary200
 )
@@ -18,7 +19,8 @@ internal val DarkColorScheme = darkColorScheme(
 internal val LightColorScheme = lightColorScheme(
     primary = Primary500,
     secondary = GrayScale200,
-    tertiary = Primary200
+    tertiary = Primary200,
+    outline = GrayScale200,
 
     /* Other default colors to override
     background = Color(0xFFFFFBFE),
