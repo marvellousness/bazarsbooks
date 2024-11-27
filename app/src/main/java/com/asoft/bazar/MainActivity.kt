@@ -6,13 +6,12 @@ import androidx.activity.compose.setContent
 import androidx.activity.enableEdgeToEdge
 import androidx.core.splashscreen.SplashScreen.Companion.installSplashScreen
 import androidx.lifecycle.lifecycleScope
-import com.asoft.bazar.features.home.HomeScreen
-import com.asoft.bazar.features.onboarding.OnboardingScreen
+import com.asoft.bazar.ui.BazarApp
 import com.asoft.bazar.ui.theme.BazarTheme
-import kotlinx.coroutines.delay
 import kotlinx.coroutines.launch
 
 class MainActivity : ComponentActivity() {
+
     override fun onCreate(savedInstanceState: Bundle?) {
         val splashscreen = installSplashScreen()
         var keepSplashScreen = true
@@ -24,7 +23,7 @@ class MainActivity : ComponentActivity() {
         enableEdgeToEdge()
         setContent {
             BazarTheme {
-                OnboardingScreen()
+                BazarApp()
             }
         }
     }

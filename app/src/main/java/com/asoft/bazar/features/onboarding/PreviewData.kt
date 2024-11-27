@@ -1,9 +1,8 @@
-package com.asoft.bazar.previewdata
+package com.asoft.bazar.features.onboarding
 
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.res.stringResource
 import com.asoft.bazar.R
-import com.asoft.bazar.features.onboarding.IntroItem
 
 internal object PreviewData {
 

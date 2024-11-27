@@ -12,4 +12,8 @@
     <string name="intro_3_title">Start Your Adventure</string>
     <string name="intro_3_subtitle">Ready to embark on a quest for inspiration and knowledge? Your adventure begins now. Let\'s go!</string>
 
+    <string name="home">Home</string>
+    <string name="category">Category</string>
+    <string name="cart">Cart</string>
+    <string name="profile">Profile</string>
 </resources>

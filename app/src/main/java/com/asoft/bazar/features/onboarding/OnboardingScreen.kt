@@ -29,7 +29,6 @@ import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import com.asoft.bazar.R
-import com.asoft.bazar.previewdata.PreviewData
 import com.asoft.bazar.ui.components.BazarSurface
 import com.asoft.bazar.ui.components.button.ButtonShape
 import com.asoft.bazar.ui.components.button.PrimaryButton

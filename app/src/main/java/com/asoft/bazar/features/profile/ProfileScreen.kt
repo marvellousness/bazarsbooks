@@ -1,4 +1,4 @@
-package com.asoft.bazar.features.home
+package com.asoft.bazar.features.profile
 
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
@@ -11,12 +11,7 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
 
 @Composable
-internal fun HomeRoute() {
-    HomeScreen()
-}
-
-@Composable
-fun HomeScreen() {
+fun ProfileScreen() {
     Column(
         modifier = Modifier
             .fillMaxSize()
@@ -24,6 +19,6 @@ fun HomeScreen() {
         horizontalAlignment = Alignment.CenterHorizontally,
         verticalArrangement = Arrangement.Center
     ) {
-        Text("This is Home screen")
+        Text("This is profile screen")
     }
 }
