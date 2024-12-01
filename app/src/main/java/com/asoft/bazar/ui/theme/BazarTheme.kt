@@ -12,10 +12,12 @@ import androidx.compose.runtime.Composable
 import androidx.compose.runtime.CompositionLocalProvider
 import androidx.compose.runtime.ReadOnlyComposable
 import androidx.compose.ui.platform.LocalContext
+import com.asoft.bazar.ui.theme.tokens.BazarSpacing
 import com.asoft.bazar.ui.theme.tokens.DarkColorScheme
 import com.asoft.bazar.ui.theme.tokens.LightColorScheme
 import com.asoft.bazar.ui.theme.tokens.LocalBazarColors
 import com.asoft.bazar.ui.theme.tokens.LocalBazarShapes
+import com.asoft.bazar.ui.theme.tokens.LocalBazarSpacing
 import com.asoft.bazar.ui.theme.tokens.LocalBazarTypography
 
 @Composable
@@ -60,4 +62,9 @@ object BazarTheme {
         @Composable
         @ReadOnlyComposable
         get() = LocalBazarShapes.current
+
+    val spacing: BazarSpacing
+        @Composable
+        @ReadOnlyComposable
+        get() = LocalBazarSpacing.current
 }

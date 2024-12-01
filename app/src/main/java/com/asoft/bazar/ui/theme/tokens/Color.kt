@@ -8,6 +8,7 @@ import com.asoft.bazar.ui.theme.tokens.PaletteTokens.GrayScale200
 import com.asoft.bazar.ui.theme.tokens.PaletteTokens.Primary200
 import com.asoft.bazar.ui.theme.tokens.PaletteTokens.Primary500
 import com.asoft.bazar.ui.theme.tokens.PaletteTokens.Yellow1
+import com.asoft.bazar.ui.theme.tokens.PaletteTokens.Yellow2
 
 
 internal val DarkColorScheme = darkColorScheme(
@@ -21,7 +22,7 @@ internal val LightColorScheme = lightColorScheme(
     secondary = GrayScale200,
     tertiary = Primary200,
     outline = GrayScale200,
-
+    onPrimary = Color.White,
     /* Other default colors to override
     background = Color(0xFFFFFBFE),
     surface = Color(0xFFFFFBFE),

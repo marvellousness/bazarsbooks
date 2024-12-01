@@ -18,6 +18,7 @@ import com.asoft.bazar.features.cart.CartDestination
 import com.asoft.bazar.features.category.CategoryDestination
 import com.asoft.bazar.features.home.HomeDestination
 import com.asoft.bazar.features.profile.ProfileDestination
+import com.asoft.bazar.features.signin.SignInDestination
 import com.asoft.bazar.navigation.BazarNavigationDestination
 import kotlinx.coroutines.CoroutineScope
 
@@ -68,7 +69,7 @@ class BazarAppState(
 fun rememberBazaarAppState(
     coroutineScope: CoroutineScope = rememberCoroutineScope(),
     navController: NavHostController = rememberNavController(),
-    startDestination: TopLevelDestination = TopLevelDestination.Home
+    startDestination: TopLevelDestination = TopLevelDestination.SignIn
 ) = remember(coroutineScope, navController, startDestination) {
     BazarAppState(coroutineScope, navController, startDestination)
 }
@@ -102,5 +103,11 @@ enum class TopLevelDestination(
         destination = ProfileDestination.destination,
         iconResourceId = R.drawable.ic_ography_profile_fill,
         textResourceId = R.string.profile
+    ),
+    SignIn(
+        route = SignInDestination.route,
+        destination = SignInDestination.destination,
+        iconResourceId = R.drawable.ic_ography_fire,
+        textResourceId = R.string.sign_in
     )
 }

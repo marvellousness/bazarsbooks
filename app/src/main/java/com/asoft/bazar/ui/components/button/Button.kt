@@ -11,6 +11,7 @@ import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.width
 import androidx.compose.material3.Button
+import androidx.compose.material3.ButtonDefaults
 import androidx.compose.material3.FilledTonalButton
 import androidx.compose.material3.OutlinedButton
 import androidx.compose.material3.Icon
@@ -36,11 +37,17 @@ fun PrimaryButton(
     modifier: Modifier = Modifier,
     icon: Painter? = null,
     shape: ButtonShape = ButtonShape.Rounded,
+    containerColor: Color = BazarTheme.colors.primary,
+    contentColor: Color = BazarTheme.colors.onPrimary,
 ) {
     Button(
         onClick = onClick,
         modifier = modifier,
-        shape = shape.shape
+        shape = shape.shape,
+        colors = ButtonDefaults.outlinedButtonColors(
+            containerColor = containerColor,
+            contentColor = contentColor
+        )
     ) {
         icon?.let { painter ->
             Icon(
@@ -79,9 +86,10 @@ fun SecondaryButton(
 
 @Composable
 fun TextButton(
-    text: String,
-    onClick: () -> Unit,
     modifier: Modifier = Modifier,
+    text: String,
+    color: Color = BazarTheme.colors.primary,
+    onClick: () -> Unit,
     icon: Painter? = null,
 ) {
     TextButton(
@@ -93,9 +101,9 @@ fun TextButton(
                 painter = painter,
                 contentDescription = null
             )
-            Spacer(modifier = Modifier.width(8.dp))
+            Spacer(modifier = Modifier.width(BazarTheme.spacing.small))
         }
-        Text(text = text)
+        Text(text = text, color = color)
     }
 }
 

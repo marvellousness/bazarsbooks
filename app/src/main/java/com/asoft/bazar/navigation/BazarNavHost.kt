@@ -8,6 +8,7 @@ import com.asoft.bazar.features.cart.cartGraph
 import com.asoft.bazar.features.category.categoryGraph
 import com.asoft.bazar.features.home.homeGraph
 import com.asoft.bazar.features.profile.profileGraph
+import com.asoft.bazar.features.signin.signinGraph
 
 @Composable
 fun BazarNavHost(
@@ -30,5 +31,6 @@ fun BazarNavHost(
         categoryGraph()
         cartGraph()
         profileGraph()
+        signinGraph()
     }
 }
