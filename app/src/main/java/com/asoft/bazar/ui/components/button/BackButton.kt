@@ -3,7 +3,6 @@ package com.asoft.bazar.ui.components.button
 import androidx.annotation.DrawableRes
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.size
-import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.IconButton
 import androidx.compose.material3.LocalContentColor
 import androidx.compose.material3.LocalMinimumInteractiveComponentSize
@@ -21,13 +20,13 @@ import com.asoft.bazar.ui.theme.BazarTheme
 fun BazarBackButton(
     onClick: () -> Unit,
     modifier: Modifier = Modifier,
-    tint: Color = BazarTheme.colors.error
+    tint: Color = BazarTheme.colors.onBackground
 ) {
     BazarIconButton(
         modifier = modifier
             .size(BazarBackButtonShapeSize)
             .background(
-                color = BazarTheme.colors.surfaceContainerLow, shape = BazarTheme.shapes.small
+                color = BazarTheme.colors.surface, shape = BazarTheme.shapes.small
             ),
         iconResourceId = R.drawable.ic_arrow_back,
         contentDescription = stringResource(id = R.string.back),

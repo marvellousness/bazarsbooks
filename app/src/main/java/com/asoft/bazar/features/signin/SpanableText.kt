@@ -25,6 +25,7 @@ fun SignInTextLink(
     val text = buildAnnotatedString {
         withStyle(SpanStyle(color = PaletteTokens.GrayScale500)) {
             append(stringResource(id = R.string.dont_have_an_account))
+            append(" ")
         }
 
         pushStringAnnotation(tag = "click", annotation = "click")
@@ -34,7 +35,7 @@ fun SignInTextLink(
                 textDecoration = TextDecoration.None
             )
         ) {
-            append(stringResource(id = R.string.sign_in))
+            append(stringResource(id = R.string.sign_up))
         }
         pop()
     }
