@@ -19,6 +19,7 @@ import com.asoft.bazar.features.category.CategoryDestination
 import com.asoft.bazar.features.home.HomeDestination
 import com.asoft.bazar.features.profile.ProfileDestination
 import com.asoft.bazar.features.signin.SignInDestination
+import com.asoft.bazar.features.signup.SignUpDestination
 import com.asoft.bazar.navigation.BazarNavigationDestination
 import kotlinx.coroutines.CoroutineScope
 
@@ -40,6 +41,9 @@ class BazarAppState(
         }
 
     val topLevelDestinations = TopLevelDestination.entries.toTypedArray()
+
+    val shouldShowBottomBar: Boolean
+        @Composable get() = currentDestination?.route == currentTopLevelDestination.route
 
     fun navigate(destination: BazarNavigationDestination, route: String? = null) =
         with(navController) {
@@ -69,7 +73,7 @@ class BazarAppState(
 fun rememberBazaarAppState(
     coroutineScope: CoroutineScope = rememberCoroutineScope(),
     navController: NavHostController = rememberNavController(),
-    startDestination: TopLevelDestination = TopLevelDestination.SignIn
+    startDestination: TopLevelDestination = TopLevelDestination.Home
 ) = remember(coroutineScope, navController, startDestination) {
     BazarAppState(coroutineScope, navController, startDestination)
 }
@@ -104,10 +108,16 @@ enum class TopLevelDestination(
         iconResourceId = R.drawable.ic_ography_profile_fill,
         textResourceId = R.string.profile
     ),
-    SignIn(
-        route = SignInDestination.route,
-        destination = SignInDestination.destination,
-        iconResourceId = R.drawable.ic_ography_fire,
-        textResourceId = R.string.sign_in
-    )
+//    SignIn(
+//        route = SignInDestination.route,
+//        destination = SignInDestination.destination,
+//        iconResourceId = R.drawable.ic_ography_fire,
+//        textResourceId = R.string.sign_in
+//    ),
+//    SignUp(
+//        route = SignUpDestination.route,
+//        destination = SignUpDestination.destination,
+//        iconResourceId = R.drawable.ic_ography_fire,
+//        textResourceId = R.string.sign_up
+//    )
 }

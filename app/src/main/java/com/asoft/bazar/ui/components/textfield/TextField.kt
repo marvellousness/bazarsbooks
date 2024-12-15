@@ -5,6 +5,7 @@ import androidx.annotation.StringRes
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
+import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.text.KeyboardActions
 import androidx.compose.foundation.text.KeyboardOptions
 import androidx.compose.material3.OutlinedTextField
@@ -25,11 +26,11 @@ import com.asoft.bazar.ui.theme.BazarTheme
 
 @Composable
 fun BazarTextField(
+    modifier: Modifier = Modifier.fillMaxWidth(),
     value: String,
     onValueChange: (String) -> Unit,
     @StringRes placeHolderResourceId: Int,
     @DrawableRes iconResourceId: Int? = null,
-    modifier: Modifier = Modifier,
     placeholder: @Composable (() -> Unit) = {
         Text(
             text = stringResource(id = placeHolderResourceId),
@@ -51,6 +52,7 @@ fun BazarTextField(
     visualTransformation: VisualTransformation = VisualTransformation.None
 ) {
     Column(
+        modifier = modifier,
         verticalArrangement = Arrangement.spacedBy(6.dp, Alignment.CenterVertically),
         horizontalAlignment = Alignment.Start,
     ) {

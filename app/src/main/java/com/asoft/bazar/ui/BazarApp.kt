@@ -1,5 +1,6 @@
 package com.asoft.bazar.ui
 
+import androidx.compose.animation.AnimatedVisibility
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.padding
 import androidx.compose.material3.Icon
@@ -22,12 +23,16 @@ fun BazarApp(
 ) {
     Scaffold(
         bottomBar = {
-            BazarBottomBar(
-                destinations = appState.topLevelDestinations,
-                currentDestination = appState.currentTopLevelDestination,
-                onNavigateToDestination = appState::navigate
+            AnimatedVisibility(
+                visible = appState.shouldShowBottomBar
+            ) {
+                BazarBottomBar(
+                    destinations = appState.topLevelDestinations,
+                    currentDestination = appState.currentTopLevelDestination,
+                    onNavigateToDestination = appState::navigate
 
-            )
+                )
+            }
         }) { innerPadding ->
         BazarNavHost(
             navController = appState.navController,
